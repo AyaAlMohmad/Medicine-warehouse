@@ -1,0 +1,241 @@
+:root {
+  --black: black;
+  --purple: purple;
+  --light-color: #666;
+  --dark-blue: #003c43;
+  --less-dark-blue: #135d66;
+  --blue: #77b0aa;
+  --light-blue: #e3fef7;
+  --white-color: #ebebeb;
+  --primary_color: #a7c4c8;
+  --secondary_color: #b2c7db;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+/* header */
+.header {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; */
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--dark-blue);
+  justify-content: space-between;
+  /* background-color: #f3efef; */
+  padding: 0.5rem 3rem;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+}
+header ul li {
+  list-style: none;
+  margin-left: 2rem;
+}
+header ul li a {
+  font-size: 18px;
+  color: black;
+}
+header ul li a:hover {
+  color: var(--blue);
+}
+.logo {
+  /* width: 30%; */
+  font-size: 2rem;
+}
+.logo span {
+  color: var(--blue);
+}
+.header .icons i {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.dropdown {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.dropdown:hover,
+.dropdown-content a:hover {
+  color: var(--blue);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--dark-blue);
+  width: 120px;
+  z-index: 9999;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+}
+/* header  */
+
+/* home-page */
+.latest-news {
+  margin: 7rem 0 2rem;
+}
+.latest-news .title {
+  width: 25%;
+  margin: 0 auto;
+}
+.latest-news .title .border-h1 {
+  border: 3px solid black;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+}
+.latest-news .title .border-h1:hover {
+  color: #fff;
+}
+
+.latest-news .title h1::before,
+.latest-news .title h1::after {
+  content: " ";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.latest-news .title h1::before {
+  left: 5px;
+}
+
+.latest-news .title h1::after {
+  right: 5px;
+}
+.latest-news .title h1:hover::before,
+.latest-news .title h1:hover::after {
+  width: 90%;
+  height: 90%;
+  border-radius: 0;
+  z-index: -1;
+  transition: 1s;
+}
+
+.home-page {
+  background-image: url("../img/medicine-capsules-global-health-with-geometric-pattern-digital-remix_53876-126742.jpg");
+  height: 93vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-page .left-section {
+  width: 50%;
+}
+.home-page h1 {
+  color: var(--dark-blue);
+  padding: 1rem 0;
+}
+.home-page .description {
+  color: var(--light-color);
+}
+.home-page button {
+  width: 30%;
+  padding: 1rem;
+  background-color: var(--less-dark-blue);
+  color: #ebebeb;
+  border: none;
+  margin-top: 1rem;
+}
+/* home-page */
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.3rem;
+  padding: 2rem 0;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #eaebec;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.card-image {
+  width: 100%;
+  /* height: 200px; */
+  object-fit: cover;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.company-name {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.quantity-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity-control button {
+  /* padding: 0.2rem 0.4rem; */
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 2rem;
+}
+.quantity-control button:hover {
+  background-color: var(--blue);
+}
+
+.quantity-control span {
+  margin: 0.5rem 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 780px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
