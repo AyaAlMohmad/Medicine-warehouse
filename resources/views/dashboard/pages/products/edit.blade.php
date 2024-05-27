@@ -34,7 +34,12 @@
                                     <textarea name="description" class="form-control" placeholder="Description" rows="5">{{ $product->description }}</textarea>
                                 </div>
                             </div>
-
+                            <div class="form-group">
+                                <label>Short Description</label>
+                                <div>
+                                    <textarea name="short_description" class="form-control" placeholder="Short Description" rows="5">{{ $product->short_description }}</textarea>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="form-group">

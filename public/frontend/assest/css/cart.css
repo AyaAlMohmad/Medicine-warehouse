@@ -1,0 +1,15 @@
+.btn .button {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--secondary_color);
+  text-align: center;
+  background-color: var(--less-dark-blue);
+  border: none;
+  border-radius: 4px;
+  width: 30%;
+}
+.btn {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}

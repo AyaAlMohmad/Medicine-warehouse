@@ -18,6 +18,7 @@
                           
                             <th>Company</th>
                             <th>Description</th>
+                            <th>Short Description</th>
                     
 
                         </tr>
@@ -39,6 +40,7 @@
                                 <td>{{ $item->category->company->name }}</td>
 
                                 <td style="word-break: break-all;">{{ $item->description }}</td>
+                                <td style="word-break: break-all;">{{ $item->short_description }}</td>
 
 
                                 </tr>

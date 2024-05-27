@@ -66,7 +66,20 @@
                     </a>
 
                 </li>
+                <li class=" {{ Request::route()->getName() == 'orders.index' ? 'active' : '' }}">
 
+                    <a href="{{ route('orders.index') }}"><i class="mdi mdi-cart-arrow-right mdi-24px"></i>
+                        <span> Order</span>
+                    </a>
+
+                </li>
+                <li class=" {{ Request::route()->getName() == 'services.index' ? 'active' : '' }}">
+
+                    <a href="{{ route('services.index') }}"><i class="fa fa-cogs"></i>
+                        <span> Services</span>
+                    </a>
+
+                </li>
             </ul>
         </div>
         <div class="clearfix"></div>

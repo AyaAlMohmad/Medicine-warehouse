@@ -1,29 +1,18 @@
 <div class="topbar">
 
     <div class="topbar-left	d-none d-lg-block">
-        <div class="text-center">
-            <a href="index.html" class="logo"><img src="{{asset('dashboard/assets/images/logo.png')}}" height="22" alt="logo"></a>
+        <div class="logo">
+            AI<span>PH</span>
         </div>
     </div>
 
     <nav class="navbar-custom">
 
          <!-- Search input -->
-         <div class="search-wrap" id="search-wrap">
-            <div class="search-bar">
-                <input class="search-input" type="search" placeholder="Search" />
-                <a href="#" class="close-search toggle-search" data-target="#search-wrap">
-                    <i class="mdi mdi-close-circle"></i>
-                </a>
-            </div>
-        </div>
+         
 
         <ul class="list-inline float-right mb-0">
-            <li class="list-inline-item dropdown notification-list">
-                <a class="nav-link waves-effect toggle-search" href="#"  data-target="#search-wrap">
-                    <i class="mdi mdi-magnify noti-icon"></i>
-                </a>
-            </li>
+          
 
         
 

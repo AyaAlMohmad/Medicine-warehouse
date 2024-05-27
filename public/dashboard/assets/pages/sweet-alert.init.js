@@ -139,14 +139,25 @@
         });
 
         //Custom width padding
-        $('#custom-padding-width-alert').click(function () {
+        $('.custom-padding-width-alert').click(function () {
+            var name = $(this).data('name');
+            var email = $(this).data('email');
+            var phone = $(this).data('phone');
+            var productName = $(this).data('product-name');
+            var productImage = $(this).data('product-image');
+                
             swal({
-                title: 'Custom width, padding, background.',
+                title: "User Information",
+                html: "<p>Name: " + name + "</p><p>Phone: <a href=tel:" + phone + ">"+ phone +"</a></p><p>Email: <a href='mailto:" + email + "'>" + email + "</a></p><p>Product Name: " + productName + "</p><img style='width: 90px; height: 90px;' src='" + productImage + "'>",
                 width: 600,
                 padding: 100,
                 background: '#fff url(//subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/geometry.png)'
             })
-        });
+        })
+        
+        
+        
+        
 
         //Ajax
         $('#ajax-alert').click(function () {

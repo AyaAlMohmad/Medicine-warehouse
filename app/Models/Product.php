@@ -12,4 +12,12 @@ class Product extends AppModel
         return $this->belongsTo(Category::class);
         
     }
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'orders');
+    }
+    public function usersFavorite()
+    {
+        return $this->belongsToMany(User::class, 'favorites');
+    }
 }

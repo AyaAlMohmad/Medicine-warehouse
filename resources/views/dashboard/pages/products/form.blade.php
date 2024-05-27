@@ -31,7 +31,12 @@
                                 <textarea name="description" class="form-control" placeholder="Description" rows="5"></textarea>
                             </div>
                         </div>
-
+                        <div class="form-group">
+                            <label>Short Description</label>
+                            <div>
+                                <textarea name="short_description" class="form-control" placeholder="Short Description" rows="5"></textarea>
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <label for="price">

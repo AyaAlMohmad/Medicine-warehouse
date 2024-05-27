@@ -3,19 +3,18 @@
 use App\Http\Controllers\Dashboard\AboutController;
 use App\Http\Controllers\Dashboard\AdditionController;
 use App\Http\Controllers\Dashboard\CategoryController;
-use App\Http\Controllers\Dashboard\ColorController;
-use App\Http\Controllers\Dashboard\CommentController;
+
+
 use App\Http\Controllers\Dashboard\CompanyController;
 use App\Http\Controllers\Dashboard\ContactController;
 use App\Http\Controllers\Dashboard\DashController;
-use App\Http\Controllers\Dashboard\MenuController;
-use App\Http\Controllers\Dashboard\OrderAdditionController;
+
 use App\Http\Controllers\Dashboard\OrderController;
 use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\ServiceController;
 use App\Http\Controllers\Dashboard\SocialController;
-use App\Http\Controllers\Dashboard\SubCategoryController;
-use Illuminate\Support\Facades\Auth;
+
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -62,6 +61,10 @@ Route::prefix('dash/')->middleware('auth')->group(function () {
     Route::get('social/finldelete/{id}', [SocialController::class, 'finalDelete'])->name('socials.finaldelete');
     Route::get('social/restore/{id}', [SocialController::class, 'restore'])->name('socials.restore');
 
+    Route::resource('services', ServiceController::class);
+    Route::get('Softservices', [ServiceController::class, 'recycleBin'])->name('services.soft');
+    Route::get('service/finldelete/{id}', [ServiceController::class, 'finalDelete'])->name('services.finaldelete');
+    Route::get('service/restore/{id}', [ServiceController::class, 'restore'])->name('services.restore');
 
 
  
@@ -70,5 +73,6 @@ Route::prefix('dash/')->middleware('auth')->group(function () {
     Route::get('product/finldelete/{id}', [ProductController::class, 'finalDelete'])->name('products.finaldelete');
     Route::get('product/restore/{id}', [ProductController::class, 'restore'])->name('products.restore');
 
+    Route::resource('orders', OrderController::class);
   
 });
